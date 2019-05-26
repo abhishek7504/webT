@@ -1,0 +1,11 @@
+{% include 'video/base.html' %}
+{% block title %}
+    <h1>    hello from title</h1>
+{% endblock %}
+{% block content %}
+    <form action="#" method="POST" >
+    {% csrf_token %}
+    {{ newform.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% include 'video/base.html' %}
+{% load staticfiles %}
+{% block contect %}
+{% load crispy_forms_tags %}
+    <div style="margin-left: 35%;" class="col-sm-2 col-sm-offset-3">
+<h1>Video Uploader</h1>
+<form enctype="multipart/form-data" method="POST" action="">
+{% csrf_token %}
+{{ form|crispy}}
+<input type="submit" value="Upload"/>
+</form>
+    </div>
+{% endblock %}

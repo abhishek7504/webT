@@ -1,0 +1,56 @@
+{##}
+{#  {% if page.has_previous %}#}
+{#  <li class="btn-floating waves-effect waves-light">#}
+{#    <a href="?page={{ page.previous_page_number }}">#}
+{#      <i class="material-icons left">chevron_left</i></a>#}
+{#  </li>#}
+{#  {% endif %}#}
+{##}
+{#  <li class="waves-effect waves-light">#}
+{#    Page {{ page.number }} of {{ page.paginator.num_pages }}.#}
+{#  </li>#}
+{##}
+{#  {% if page.has_next %}#}
+{#  <li class="btn-floating waves-effect waves-light">#}
+{#    <a href="?page={{ page.next_page_number }}"><i class="material-icons right">chevron_right</i></a>#}
+{#  </li>#}
+{#{% endif %}#}
+
+
+
+{##}
+{#<div>#}
+{#<nav aria-label="" class="center">#}
+{#  <ul class="pagination">#}
+{#      {% if page.has_previous %}#}
+{#    <li class="page-item active">#}
+{#            <a class="page-link"  href="?page={{ page.previous_page_number }}">#}
+{#     Previous</a>#}
+{#    </li>#}
+{#  {% endif %}#}
+{#    <li class="page-item active">#}
+{#      <a class="page-link" href=""> <span class="sr-only">{{ page.paginator.num_pages }}</span></a>#}
+{#    </li>#}
+{#      {% if page.has_next %}#}
+{#      <a class="page-link" href=">Next</a>#}
+{#    </li>#}
+{#  </ul>#}
+{#</nav>#}
+{#    {% endif %}#}
+{#</div>#}
+<div style="margin-left: 40%">
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item">
+              {% if page.has_previous %}
+      <a class="page-link" href="?page={{ page.previous_page_number }}"tabindex="-1">Previous</a>
+    </li>
+      {% endif %}
+        {% if page.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ page.next_page_number }}">Next</a>
+    </li>
+  {% endif %}
+</div>
+  </ul>
+</nav>
